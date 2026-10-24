@@ -4,21 +4,24 @@ plugins {
 }
 
 android {
-    namespace = "com.example.scrollcounter"
+    namespace = "dev.lessbrainrot"
     compileSdk = 36
 
     defaultConfig {
-        applicationId = "dev.pranavsw.lessbrainrot"
+        applicationId = "dev.lessbrainrot"
         minSdk = 29
         targetSdk = 35
         versionCode = 1
-        versionName = "0.1"
+        versionName = "0.2.0"
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
     buildTypes {
         release {
             isMinifyEnabled = true
+            // Local testing signs with the debug key; a release keystore is only
+            // needed for store distribution (see README).
+            signingConfig = signingConfigs.getByName("debug")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
@@ -36,5 +39,7 @@ dependencies {
     implementation("androidx.core:core-ktx:1.17.0")
     implementation("androidx.appcompat:appcompat:1.7.0")
     implementation("com.google.android.material:material:1.13.0")
+    debugImplementation("dev.lessbrainrot.scroll_aware_ui:flutter_debug:1.0")
+    releaseImplementation("dev.lessbrainrot.scroll_aware_ui:flutter_release:1.0")
     testImplementation("junit:junit:4.13.2")
 }
