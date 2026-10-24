@@ -1,4 +1,4 @@
-package com.example.scrollcounter
+package dev.lessbrainrot
 
 class GestureCounter(
     private val debounceMs: Long = DEFAULT_DEBOUNCE_MS,

@@ -1,29 +1,10 @@
 <resources>
-    <string name="app_name">Context-Aware Scroll Counter</string>
-    <string name="accessibility_service_label">Scroll counter experiment</string>
-    <string name="accessibility_service_description">Measures minimal scroll metadata in selected short-video feeds. It does not read screen text.</string>
+    <string name="app_name">Scroll Aware</string>
+    <string name="accessibility_service_label">Scroll Aware</string>
+    <string name="accessibility_service_description">Counts scrolling gestures in short-video feeds (Instagram Reels, YouTube Shorts) to raise awareness of your habits. It observes only structural scroll metadata — never text, images, or video content. All data stays on your device.</string>
 
-    <string name="settings_open_accessibility">Open accessibility settings</string>
-    <string name="settings_grant_overlay">Grant overlay permission</string>
-    <string name="settings_request_battery_exemption">Request battery-optimization exemption</string>
-    <string name="settings_track_instagram">Track Instagram</string>
-    <string name="settings_track_youtube">Track YouTube</string>
-    <string name="settings_floating_counter">Show floating counter</string>
-    <string name="settings_developer_diagnostics">Developer diagnostic mode</string>
-    <string name="settings_reset_counters">Reset today\'s counters</string>
-    <string name="settings_export_diagnostics">Export diagnostic metadata</string>
-
-    <string name="state_on">enabled</string>
-    <string name="state_off">disabled</string>
-    <string name="battery_state_exempt">exempted</string>
-    <string name="battery_state_active">active (aggressive battery managers may stop the service)</string>
-    <string name="status_accessibility">Accessibility service: %1$s</string>
-    <string name="status_overlay">Overlay permission: %1$s</string>
-    <string name="status_battery">Battery optimization: %1$s</string>
-    <string name="status_classification">Current feed classification: %1$s</string>
-    <string name="status_classification_unknown">UNKNOWN (service not connected)</string>
-    <string name="status_totals">Today\'s total: %1$d\nInstagram: %2$d\nYouTube: %3$d</string>
-
-    <string name="diagnostics_subject">Scroll counter diagnostic metadata</string>
-    <string name="diagnostics_empty">No diagnostic events have been recorded. Enable diagnostic mode, return to the target app, and generate events first.</string>
+    <string name="limit_channel_name">Daily scroll limit</string>
+    <string name="limit_channel_description">Notifies you once a day when you reach your daily scroll limit.</string>
+    <string name="limit_reached_title">Daily scroll limit reached</string>
+    <string name="limit_reached_text">You have scrolled %1$d times today (your limit is %2$d). Time for a break?</string>
 </resources>

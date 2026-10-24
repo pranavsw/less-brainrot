@@ -1,4 +1,4 @@
-package com.example.scrollcounter
+package dev.lessbrainrot
 
 import org.junit.Assert.assertFalse
 import org.junit.Assert.assertTrue

@@ -1,4 +1,6 @@
-package com.example.scrollcounter
+package dev.lessbrainrot
+
+import android.view.accessibility.AccessibilityEvent
 
 enum class FeedState { FEED_CONFIRMED, FEED_NOT_CONFIRMED, FEED_UNKNOWN }
 
@@ -31,11 +33,17 @@ data class ScrollObservation(
 
     val isYouTubeFallbackEvent: Boolean
         get() = packageName == SupportedPackages.YOUTUBE &&
-            eventType == android.view.accessibility.AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED &&
+            eventType == AccessibilityEvent.TYPE_WINDOW_CONTENT_CHANGED &&
             !hasVerticalMovement
 }
 
 data class GestureDecision(
     val counted: Boolean,
     val reason: String
+)
+
+data class DayCount(
+    val date: String,
+    val total: Int,
+    val perApp: Map<String, Int>
 )

@@ -1,4 +1,4 @@
-package com.example.scrollcounter
+package dev.lessbrainrot
 
 import android.accessibilityservice.AccessibilityService
 import android.content.Context
@@ -12,6 +12,7 @@ class TrackingAccessibilityService : AccessibilityService() {
     private lateinit var counter: GestureCounter
     private lateinit var diagnostics: DiagnosticLog
     private lateinit var overlay: FloatingCounterOverlay
+    private lateinit var limitNotifier: LimitNotifier
     private var activePackage: String? = null
     private var overlayPackage: String? = null
     private val handler = Handler(Looper.getMainLooper())
@@ -31,6 +32,7 @@ class TrackingAccessibilityService : AccessibilityService() {
         diagnostics = DiagnosticLog(this)
         diagnostics.enabled = getSharedPreferences("settings", MODE_PRIVATE).getBoolean("diagnostics", false)
         overlay = FloatingCounterOverlay(this)
+        limitNotifier = LimitNotifier(this)
     }
 
     override fun onAccessibilityEvent(event: AccessibilityEvent) {
@@ -63,6 +65,7 @@ class TrackingAccessibilityService : AccessibilityService() {
         val counted = decision.counted
         if (counted) {
             store.increment(packageName)
+            limitNotifier.maybeNotify(store.total())
         }
         val overlayEnabled = getSharedPreferences("settings", MODE_PRIVATE)
             .getBoolean("overlay_enabled", true)

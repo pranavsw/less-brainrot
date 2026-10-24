@@ -1,4 +1,4 @@
-package com.example.scrollcounter
+package dev.lessbrainrot
 
 import android.os.Build
 import android.view.accessibility.AccessibilityEvent

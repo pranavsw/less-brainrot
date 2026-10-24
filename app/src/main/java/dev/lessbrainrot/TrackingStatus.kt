@@ -1,4 +1,4 @@
-package com.example.scrollcounter
+package dev.lessbrainrot
 
 object TrackingStatus {
     var current: FeedClassification? = null
