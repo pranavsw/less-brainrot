@@ -19,10 +19,21 @@ android {
     buildTypes {
         release {
             isMinifyEnabled = true
+            isShrinkResources = true
             // Local testing signs with the debug key; a release keystore is only
             // needed for store distribution (see README).
             signingConfig = signingConfigs.getByName("debug")
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
+        }
+    }
+    splits {
+        abi {
+            // One lean APK for real devices; store distribution should use an
+            // App Bundle, which delivers per-device ABIs automatically.
+            isEnable = true
+            reset()
+            include("arm64-v8a")
+            isUniversalApk = false
         }
     }
 
