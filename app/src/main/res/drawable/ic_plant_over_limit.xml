@@ -1,0 +1,97 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="70dp"
+    android:viewportWidth="120"
+    android:viewportHeight="140">
+
+    <!-- Card -->
+    <path
+        android:fillColor="#171A21"
+        android:pathData="M12,2 H108 Q118,2 118,12 V128 Q118,138 108,138 H12 Q2,138 2,128 V12 Q2,2 12,2 Z" />
+    <path
+        android:fillColor="#00000000"
+        android:strokeColor="#2A2F3A"
+        android:strokeWidth="1"
+        android:pathData="M12,2 H108 Q118,2 118,12 V128 Q118,138 108,138 H12 Q2,138 2,128 V12 Q2,2 12,2 Z" />
+
+    <!-- Glow (red alarm) -->
+    <path android:fillColor="#EF5350" android:fillAlpha="0.07"
+        android:pathData="M60,72 m-46,0 a46,46 0 1 0 92,0 a46,46 0 1 0 -92,0" />
+    <path android:fillColor="#EF5350" android:fillAlpha="0.10"
+        android:pathData="M60,72 m-34,0 a34,34 0 1 0 68,0 a34,34 0 1 0 -68,0" />
+    <path android:fillColor="#EF5350" android:fillAlpha="0.14"
+        android:pathData="M60,72 m-23,0 a23,23 0 1 0 46,0 a23,23 0 1 0 -46,0" />
+
+    <!-- Floating reel icons: four, crowding in -->
+    <group android:translateX="18" android:translateY="24">
+        <path android:fillColor="#EF5350" android:pathData="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" />
+        <path android:fillColor="#171A21" android:pathData="M6,5 L12,8.5 L6,12 Z" />
+    </group>
+    <group android:translateX="88" android:translateY="20">
+        <path android:fillColor="#EF5350" android:pathData="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" />
+        <path android:fillColor="#171A21" android:pathData="M6,5 L12,8.5 L6,12 Z" />
+    </group>
+    <group android:translateX="92" android:translateY="46">
+        <path android:fillColor="#EF5350" android:pathData="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" />
+        <path android:fillColor="#171A21" android:pathData="M6,5 L12,8.5 L6,12 Z" />
+    </group>
+    <group android:translateX="12" android:translateY="48">
+        <path android:fillColor="#EF5350" android:pathData="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" />
+        <path android:fillColor="#171A21" android:pathData="M6,5 L12,8.5 L6,12 Z" />
+    </group>
+
+    <!-- Stem: badly bent -->
+    <path android:strokeColor="#6D4C41" android:strokeWidth="3.5"
+        android:strokeLineCap="round" android:fillColor="#00000000"
+        android:pathData="M60,104 C60,94 66,86 62,76 C59,68 66,60 72,54" />
+
+    <!-- Leaves: shriveled, hanging -->
+    <group android:rotation="52" android:pivotX="60" android:pivotY="88">
+        <path android:fillColor="#8D6E63"
+            android:pathData="M59,88 C57,82 51,78 45,80 C48,85 55,90 59,88 Z" />
+    </group>
+    <group android:rotation="-52" android:pivotX="60" android:pivotY="88">
+        <path android:fillColor="#7A5C52"
+            android:pathData="M61,88 C63,82 69,78 75,80 C72,85 65,90 61,88 Z" />
+    </group>
+    <group android:rotation="56" android:pivotX="60" android:pivotY="74">
+        <path android:fillColor="#8D6E63"
+            android:pathData="M59,74 C57,68 51,64 45,66 C48,71 55,76 59,74 Z" />
+    </group>
+    <group android:rotation="-56" android:pivotX="60" android:pivotY="74">
+        <path android:fillColor="#7A5C52"
+            android:pathData="M61,74 C63,68 69,64 75,66 C72,71 65,76 61,74 Z" />
+    </group>
+    <group android:rotation="60" android:pivotX="72" android:pivotY="54">
+        <path android:fillColor="#8D6E63"
+            android:pathData="M72,54 C69,49 71,41 73,36 C75,41 76,49 72,54 Z" />
+    </group>
+
+    <!-- Fallen leaves on the shelf -->
+    <path android:fillColor="#6D4C41"
+        android:pathData="M26,130 C27,126 33,125 36,128 C33,131 27,131 26,130 Z" />
+    <path android:fillColor="#7A5C52"
+        android:pathData="M86,131 C87,127 93,126 96,129 C93,132 87,132 86,131 Z" />
+
+    <!-- Jar -->
+    <path android:fillColor="#F1EBDF"
+        android:pathData="M46,74 H74 V82 C82,86 86,92 86,102 C86,114 78,122 60,122 C42,122 34,114 34,102 C34,92 38,86 46,82 Z" />
+    <path android:fillColor="#E4DCCB"
+        android:pathData="M42,68 H78 Q81,68 81,71 V73 Q81,76 78,76 H42 Q39,76 39,73 V71 Q39,68 42,68 Z" />
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="2" android:strokeLineCap="round"
+        android:strokeAlpha="0.45" android:fillColor="#00000000"
+        android:pathData="M40,92 C38,97 38,102 40,107" />
+
+    <!-- Soil -->
+    <path android:fillColor="#5D4037"
+        android:pathData="M38,110 C40,104 48,102 60,102 C72,102 80,104 82,110 C82,117 74,121 60,121 C46,121 38,117 38,110 Z" />
+    <path android:fillColor="#795548" android:pathData="M48,114 m-1.8,0 a1.8,1.8 0 1 0 3.6,0 a1.8,1.8 0 1 0 -3.6,0" />
+    <path android:fillColor="#6D4C41" android:pathData="M68,113 m-1.5,0 a1.5,1.5 0 1 0 3,0 a1.5,1.5 0 1 0 -3,0" />
+
+    <!-- Face: X eyes, frown -->
+    <path android:strokeColor="#2B2620" android:strokeWidth="2" android:strokeLineCap="round"
+        android:fillColor="#00000000"
+        android:pathData="M50.5,85.5 L55.5,90.5 M55.5,85.5 L50.5,90.5 M64.5,85.5 L69.5,90.5 M69.5,85.5 L64.5,90.5" />
+    <path android:strokeColor="#2B2620" android:strokeWidth="2" android:strokeLineCap="round"
+        android:fillColor="#00000000" android:pathData="M53,99 Q60,94 67,99" />
+</vector>

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="480" height="560" viewBox="0 0 120 140">
+  <!-- Scroll Aware app icon: thriving plant (state 1 of the plant health scale).
+       Same artwork as app/src/main/res/drawable/ic_plant_very_less.xml -->
+
+  <!-- Card -->
+  <path d="M12,2 H108 Q118,2 118,12 V128 Q118,138 108,138 H12 Q2,138 2,128 V12 Q2,2 12,2 Z" fill="#171A21"/>
+  <path d="M12,2 H108 Q118,2 118,12 V128 Q118,138 108,138 H12 Q2,138 2,128 V12 Q2,2 12,2 Z" fill="none" stroke="#2A2F3A" stroke-width="1"/>
+
+  <!-- Glow -->
+  <circle cx="60" cy="72" r="46" fill="#6CE284" fill-opacity="0.06"/>
+  <circle cx="60" cy="72" r="34" fill="#6CE284" fill-opacity="0.09"/>
+  <circle cx="60" cy="72" r="23" fill="#6CE284" fill-opacity="0.14"/>
+
+  <!-- Floating reel icons -->
+  <g transform="translate(18,24)">
+    <path d="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" fill="#6CE284"/>
+    <path d="M6,5 L12,8.5 L6,12 Z" fill="#171A21"/>
+  </g>
+  <g transform="translate(88,20)">
+    <path d="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" fill="#6CE284"/>
+    <path d="M6,5 L12,8.5 L6,12 Z" fill="#171A21"/>
+  </g>
+  <g transform="translate(92,46)">
+    <path d="M3,0 H14 Q17,0 17,3 V14 Q17,17 14,17 H3 Q0,17 0,14 V3 Q0,0 3,0 Z" fill="#6CE284"/>
+    <path d="M6,5 L12,8.5 L6,12 Z" fill="#171A21"/>
+  </g>
+
+  <!-- Sparkles -->
+  <path d="M28,47 L29.6,52.4 L35,54 L29.6,55.6 L28,61 L26.4,55.6 L21,54 L26.4,52.4 Z" fill="#A5D6A7" fill-opacity="0.9"/>
+  <path d="M94,55 L95,58.5 L98.5,59.5 L95,60.5 L94,64 L93,60.5 L89.5,59.5 L93,58.5 Z" fill="#A5D6A7" fill-opacity="0.7"/>
+
+  <!-- Stem -->
+  <path d="M60,104 C60,94 60,80 60,64 C60,58 60,54 60,48" fill="none" stroke="#2E7D32" stroke-width="3.5" stroke-linecap="round"/>
+
+  <!-- Leaves -->
+  <path d="M59,88 C57,80 49,76 43,80 C47,86 55,90 59,88 Z" fill="#3FA24B"/>
+  <path d="M61,88 C63,80 71,76 77,80 C73,86 65,90 61,88 Z" fill="#35913F"/>
+  <path d="M59,74 C57,66 49,62 43,66 C47,72 55,76 59,74 Z" fill="#3FA24B"/>
+  <path d="M61,74 C63,66 71,62 77,66 C73,72 65,76 61,74 Z" fill="#35913F"/>
+  <path d="M60,50 C56,44 58,34 60,28 C62,34 64,44 60,50 Z" fill="#3FA24B"/>
+
+  <!-- Jar -->
+  <path d="M46,74 H74 V82 C82,86 86,92 86,102 C86,114 78,122 60,122 C42,122 34,114 34,102 C34,92 38,86 46,82 Z" fill="#F1EBDF"/>
+  <path d="M42,68 H78 Q81,68 81,71 V73 Q81,76 78,76 H42 Q39,76 39,73 V71 Q39,68 42,68 Z" fill="#E4DCCB"/>
+  <path d="M40,92 C38,97 38,102 40,107" fill="none" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round" stroke-opacity="0.45"/>
+
+  <!-- Soil -->
+  <path d="M38,110 C40,104 48,102 60,102 C72,102 80,104 82,110 C82,117 74,121 60,121 C46,121 38,117 38,110 Z" fill="#5D4037"/>
+  <circle cx="48" cy="114" r="1.8" fill="#795548"/>
+  <circle cx="68" cy="113" r="1.5" fill="#6D4C41"/>
+
+  <!-- Face: happy -->
+  <circle cx="53" cy="88" r="2.3" fill="#2B2620"/>
+  <circle cx="67" cy="88" r="2.3" fill="#2B2620"/>
+  <path d="M53,94 Q60,100 67,94" fill="none" stroke="#2B2620" stroke-width="2" stroke-linecap="round"/>
+</svg>

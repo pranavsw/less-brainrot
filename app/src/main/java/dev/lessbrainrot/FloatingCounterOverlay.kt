@@ -99,7 +99,7 @@ class FloatingCounterOverlay(private val context: Context) {
             gravity = Gravity.CENTER_VERTICAL
             setPadding(dp(10), dp(8), dp(14), dp(8))
             background = GradientDrawable().apply {
-                setColor(Color.argb(240, 20, 22, 28))
+                setColor(Color.argb(250, 20, 22, 28))
                 cornerRadius = 26f * density
                 setStroke(
                     (1 * density).toInt(),
@@ -124,6 +124,7 @@ class FloatingCounterOverlay(private val context: Context) {
     }
 
     private fun overlayParams(): WindowManager.LayoutParams {
+        val density = context.resources.displayMetrics.density
         return WindowManager.LayoutParams(
             WindowManager.LayoutParams.WRAP_CONTENT,
             WindowManager.LayoutParams.WRAP_CONTENT,
@@ -131,7 +132,9 @@ class FloatingCounterOverlay(private val context: Context) {
             WindowManager.LayoutParams.FLAG_NOT_FOCUSABLE or WindowManager.LayoutParams.FLAG_NOT_TOUCHABLE,
             PixelFormat.TRANSLUCENT
         ).apply {
-            gravity = Gravity.CENTER
+            // Top-center: clear of the camera cutout but above feed content.
+            gravity = Gravity.TOP or Gravity.CENTER_HORIZONTAL
+            y = (32 * density).toInt()
         }
     }
 }

@@ -73,7 +73,11 @@ class TrackingAccessibilityService : AccessibilityService() {
             detector.isFeedContextConfirmed(packageName) ||
             packageName == SupportedPackages.YOUTUBE
         if (overlayEnabled && shouldShowOverlay) {
-            if (overlay.show(store.total())) overlayPackage = packageName
+            val limit = getSharedPreferences("settings", MODE_PRIVATE)
+                .getInt(Prefs.KEY_LIMIT, 0)
+            if (overlay.show(store.total(), PlantState.forCount(store.total(), limit))) {
+                overlayPackage = packageName
+            }
         } else if (!overlayEnabled) {
             overlay.hide()
             overlayPackage = null
