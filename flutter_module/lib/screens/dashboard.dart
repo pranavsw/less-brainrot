@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import '../app.dart';
 import '../apps_meta.dart';
 import '../bridge.dart';
+import '../widgets/plant_avatar.dart';
 import 'limit_sheet.dart';
 
 class DashboardScreen extends StatelessWidget {
@@ -117,35 +118,68 @@ class _TodayCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              'Scrolls today',
-              style: theme.textTheme.bodyMedium?.copyWith(
-                color: theme.colorScheme.onSurfaceVariant,
-              ),
-            ),
-            const SizedBox(height: 4),
             Row(
-              crossAxisAlignment: CrossAxisAlignment.baseline,
-              textBaseline: TextBaseline.alphabetic,
+              crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                Text(
-                  '$today',
-                  style: theme.textTheme.displayMedium
-                      ?.copyWith(fontWeight: FontWeight.w600),
-                ),
-                if (limit > 0) ...[
-                  const SizedBox(width: 8),
-                  Text(
-                    '/ $limit',
-                    style: theme.textTheme.headlineSmall?.copyWith(
-                      color: theme.colorScheme.onSurfaceVariant,
-                    ),
+                PlantAvatar(count: today, limit: limit, size: 132),
+                const SizedBox(width: 12),
+                Expanded(
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        'Scrolls today',
+                        style: theme.textTheme.bodyMedium?.copyWith(
+                          color: theme.colorScheme.onSurfaceVariant,
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.baseline,
+                        textBaseline: TextBaseline.alphabetic,
+                        children: [
+                          Text(
+                            '$today',
+                            style: theme.textTheme.displayMedium
+                                ?.copyWith(fontWeight: FontWeight.w600),
+                          ),
+                          if (limit > 0) ...[
+                            const SizedBox(width: 8),
+                            Text(
+                              '/ $limit',
+                              style: theme.textTheme.headlineSmall?.copyWith(
+                                color: theme.colorScheme.onSurfaceVariant,
+                              ),
+                            ),
+                          ],
+                        ],
+                      ),
+                      if (limit > 0) ...[
+                        const SizedBox(height: 4),
+                        Text(
+                          overLimit
+                              ? 'You\'ve reached your limit for today'
+                              : '$remaining scrolls left today',
+                          style: theme.textTheme.bodySmall?.copyWith(
+                            color: overLimit
+                                ? theme.colorScheme.error
+                                : theme.colorScheme.onSurfaceVariant,
+                          ),
+                        ),
+                      ] else ...[
+                        TextButton.icon(
+                          onPressed: onEditLimit,
+                          icon: const Icon(Icons.flag_outlined, size: 18),
+                          label: const Text('Set a daily limit'),
+                        ),
+                      ],
+                    ],
                   ),
-                ],
+                ),
               ],
             ),
             if (progress != null) ...[
-              const SizedBox(height: 16),
+              const SizedBox(height: 12),
               ClipRRect(
                 borderRadius: BorderRadius.circular(4),
                 child: LinearProgressIndicator(
@@ -156,26 +190,7 @@ class _TodayCard extends StatelessWidget {
                       : theme.colorScheme.primary,
                 ),
               ),
-              const SizedBox(height: 8),
-              Text(
-                overLimit
-                    ? 'You\'ve reached your limit for today'
-                    : '$remaining scrolls left today',
-                style: theme.textTheme.bodyMedium?.copyWith(
-                  color: overLimit
-                      ? theme.colorScheme.error
-                      : theme.colorScheme.onSurfaceVariant,
-                ),
-              ),
-            ] else
-              Padding(
-                padding: const EdgeInsets.only(top: 8),
-                child: TextButton.icon(
-                  onPressed: onEditLimit,
-                  icon: const Icon(Icons.flag_outlined, size: 18),
-                  label: const Text('Set a daily limit'),
-                ),
-              ),
+            ],
             if (limit > 0)
               Align(
                 alignment: Alignment.centerRight,
